@@ -1,0 +1,380 @@
+<style>
+  *{
+
+  }
+ 
+  body{
+    animation-name: test;
+    animation-duration: 2s;
+    transform: translateZ(0);
+    background: url("ss26.jpg"), black;
+    background-size: 100%;
+    background-position-y: -70px;
+    background-repeat-y: no-repeat;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Sans-Serif;
+  }
+  
+  @keyframes test{
+    from{margin-top: -20%;
+      opacity: 0;
+    }
+    to{margin-top: 0;
+      opacity: 1;
+    }
+  }
+  
+/* @webkit-keyframes test{
+	  from{background: red;}
+    to{background: blue;}
+}
+ 
+  @-moz-keyframes test{
+  from{background: red;}
+    to{background: blue;}
+}
+ 
+  @-o-keyframes test{
+	  from{background: red;}
+    to{background: blue;}
+}*/
+  
+  #header{
+    height: 60px;
+    width: auto;
+    background: rgba(78,78,78,0.1);
+    margin : -20px auto;
+    position: relative;
+  }
+  
+  #header h2{
+    color: white;
+    padding: 15px 0px;
+    text-align: center;
+    text-shadow: 0 0 15px white;
+  }
+  
+  #box2head{
+    background: rgba(60, 60, 60, 1);
+    margin-top: -18px;
+    height: 50px;
+    border-radius: 30px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.598);
+  }
+
+  .navigation{
+    font-size: 12pt;
+    margin-right: 24px;
+  }
+  
+  .navigation li{
+    display: inline-block;
+    padding: 15px 2px;
+    list-style: none;
+    float: left;
+  }
+  
+  .navigation li a{
+    text-decoration: none;
+    color: grey;
+  }
+  
+  .navigation li a p{
+    margin: 0px auto;
+  }
+  
+  .navigation li a:hover{
+    text-shadow: 0 0 10px yellow;
+  }
+  
+  .aktif{
+    color: white;
+    font-weight: 500;
+    text-shadow: 0 0 15px gold;
+  }
+  
+  #info{
+    background: rgb(33,33,33);
+    margin: 50px auto;
+  }
+  
+  #info p{
+    margin: 20px 20px;
+    color: grey;
+    word-spacing: 2px;
+    line-height: 25px;
+    font-family: "Comic Sans MS", Arial, Sans-Serif;
+    font-size: 13pt;
+    letter-spacing: 0px;
+  }
+  
+  #screenshot{
+    background: rgb(18,18,18);
+    margin: -70px auto;
+  }
+  
+  #screenshot h2{
+    color: #848484;
+    display: block;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 14pt;
+  }
+  
+  #screenshot img{
+    display: block;
+    max-width: 100%;
+    margin: 20px auto;
+    height: 160px;
+  }
+  
+  #feature{
+    background: #363636;
+    margin: 70px auto;
+    height: 370px;
+  }
+  
+  #feature h2{
+    color: white;
+    padding-top: 20px;
+    text-align: center;
+  }
+  
+  #feature ul{
+    line-height: 25px;
+    margin: auto 20px;
+  }
+  
+  #feature li{
+    color: #c2c2c2;
+  }
+  
+  #note{
+    background: #1e1e1e;
+    border-radius: 15px;
+    margin: -80px auto;
+    height: 460px;
+    font-size: 12pt;
+  }
+  
+  #note h2{
+    text-align: center;
+    padding-top: 20px;
+    color: white;
+  }
+  
+  #note h3{
+    margin: auto 30px;
+    color: white;
+  }
+  
+  .allow{
+    text-shadow: 0 0 5px green;
+  }
+  
+  .nallow{
+    text-shadow: 0 0 5px red;
+  }
+  
+  #note li{
+    color: #8c8c8c;
+    line-height: 22px;
+  }
+ 
+  #notes{
+    background: rgb(40,40,50);
+    margin-top: 60px;
+    height: 300px;
+  }
+  
+  #notes h2{
+    color: white;
+    padding-top: 25px;
+    padding-left: 45px;
+  }
+  
+  #notes li{
+    color: rgb(138,138,138);
+    line-height: 25px;
+  }
+  
+  #notes p{
+    padding-left: 30px;
+    padding-right: 15px;
+    font-size: 13pt;
+    color: white;
+    word-spacing: 2px;
+  }
+  
+  #notes a{
+    text-decoration: none;
+    color: white;
+  }
+  
+  #notes .facebook{
+    text-shadow: 0 0 10px #03afff;
+  }
+  
+  #notes .facebook:hover{
+    color: #0034ff;
+  }
+  
+  #notes .twitter{
+    text-shadow: 0 0 15px #00d5ff;
+  }
+  
+  #notes .twitter:hover{
+    color: #2afffa;
+  }
+  
+  #notes .instagram{
+    text-shadow: 0 0 15px #ff0efc;
+  }
+  
+  #notes .instagram:hover{
+    color: #9f00fb;
+  }
+  
+  #footer{
+    background: black;
+    height: 30px;
+    margin-top: -18px;
+  }
+  
+  .bfooter{
+    background: #0e0e0e;
+    height: 30px;
+    width: 88%;
+    display: block;
+    margin: 0px auto;
+    border-radius: 25px;
+  }
+  
+  .bfooter p{
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    font-size: 10pt;
+  }
+  
+  .bfooter a{
+    text-decoration: none;
+    color: rgb(99,99,99);
+  }
+  
+  .bfooter a:hover{
+    background: gray;
+    text-shadow: 0 0 25px aqua, 2px 2px 5px black;
+    border-radius: 5px;
+  }
+  
+  /* Download Page */
+  #download{
+    background: rgb(25,25,35);
+    height: 550px;
+    margin-top: 50px;
+    text-align: center;
+  }
+  
+  #download h2{
+    color: white;
+    font-size: 14pt;
+  }
+  
+  #version2{
+    border-bottom: 2px solid grey;
+  }
+  
+  #version2 h2{
+    padding-top: 35px;
+  }
+  
+  #download h4{
+    font-size: 12pt;
+    color: #898989;
+  }
+  
+  #download a{
+    text-decoration: none;
+    color: white;
+    font-size: 14pt;
+    display: block;
+    background: rgb(20,20,20);
+    box-shadow: 0 0 25px rgb(10,10,10);
+    width: 90%;
+    height: 30px;
+    margin: 0 auto;
+    padding-top: 8px;
+    border-radius: 25px;
+  }
+  
+  #download a:hover{
+    background-color: #00d100;
+    box-shadow: 0 0 15px #00d100, 0 0 35px rgb(0,209,0);
+    color: rgb(25,25,35);
+    font-weight: 800;
+/*    font-size: 16pt;*/
+    letter-spacing: 1px;
+    transition: 1s;
+  }
+  
+  /* Changelog Page */
+  
+  #changelog{
+    background:rgb(30,30,40);
+    margin-top: 50px;
+    height: 780px;
+  }
+  
+  #changelog h3{
+    text-align: center;
+    color: white;
+    font-size: 15pt;
+  }
+  
+  #changelog p{
+    margin-left: 25px;
+    color: #d1d1d1;
+  }
+  
+  .v2{
+    padding-top: 25px;
+    border-bottom: 2px solid gray
+  }
+  
+  #changelog li{
+    line-height: 27px;
+    font-size: 13pt;
+    color: #a2a2a2;
+  }
+  
+  /* Screenshots Page */
+  #pagess{
+    background: rgb(30, 30, 40);
+    margin-top: 50px;
+    height: 850px;
+  }
+  
+  #pagess h3{
+    color: white;
+    text-align: center;
+  }
+  
+  .psv2 h3{
+    padding-top: 35px;
+  }
+  
+  .psv2{
+    border-bottom: 2px solid gray;
+  }
+  
+  #pagess img{
+    display: inline-block;
+    max-width: 100%;
+    height: 85px;
+    margin: 2px;
+    padding-left: 3px;
+  }
+ 
+</style>
