@@ -1,0 +1,532 @@
+<style>
+
+    *{
+        
+    }
+    
+    @font-face{
+        font-family: Quicksand;
+        src: url("font/Quicksand-VariableFont_wght.ttf");
+    }
+    
+    @font-face{
+        font-family: Quicksand-bold;
+        src: url("font/static/Quicksand-Bold.ttf");
+    }
+    
+    body{
+        margin: 0;
+        padding: 0;
+        font-family: Quicksand, Arial, Sans-Serif;
+        background: url('background-1.png');
+        background-size: 100%;
+        background-position: 0 40pt;
+        background-repeat: no-repeat;
+    }
+    
+    header{
+        display: inline-block;
+        top: 0;
+        background: #191919;
+        color: white;
+        position: fixed;
+        z-index: 1;
+        width: 100%;
+        box-shadow: black 0 4pt 16px;
+    }
+  
+    .light-mode{
+        color: black;
+        background: white;
+    }
+  
+    header h3{
+        text-align: left;
+        margin-left: 10pt;
+        font-size: 16pt;
+    }
+
+    header img{
+        float: right;
+        height: 45pt;
+        width: 45pt;
+        margin-top: -47pt;
+        margin-right: 2pt;
+        filter: invert();
+        
+    }
+    
+    @keyframes slide{
+        from{
+            margin-top: -10pt;
+            opacity: 0;
+        } to {
+            margin-top: 0;
+            opacity: 1;
+        }
+    }
+    
+    @keyframes exslide{
+        from{
+            margin-top: 0;
+            opacity: 1;
+        } to {
+            margin-top: -10pt;
+            opacity: 0;
+        }
+    }
+    
+    #navigation:hover .dropped{
+        display: inline-block;
+        animation: slide;
+        animation-duration: 0.5s;
+    }
+    
+    #navigation .dropped{
+        list-style: none;
+        margin-left: -22pt;
+        height: 30pt;
+        padding-top: 6pt;
+        width: 100%;
+        position: absolute;
+        font-size: 10pt;
+        background: rgb(34,34,34);
+        margin-top: 0;
+        display: none;
+        animation: exslide;
+        animation-duration: 0.5s;
+        box-shadow: black 0 2pt 16px;
+    }
+    
+   #navigation .dropped li{
+        float: left;
+        margin: 6pt 4pt;
+    }
+    
+   #navigation .dropped a{
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+    }
+    
+    #navigation .dropped a:hover{
+        background: rgb(16,16,16);
+        border-radius: 2px;
+        text-shadow: yellow 0 0 12px;
+    }
+    
+    #navigation .active{
+        text-shadow: gray 0 0 10px, white 0 0 12px;
+        font-family: Quicksand-Bold;
+    }
+    
+    #navigation .btn{
+        margin-top: -8pt;
+        position: absolute;
+        right: 0;
+        margin-right: 16pt;
+    }
+    
+    article{
+        height: 100%;
+        position: relative;
+        margin-top: 52pt;
+       /* overflow: hidden;*/
+    }
+    
+    article #title{
+        background-color: #0909096f;
+        text-align: center;
+        color: #ffffff;
+        height: 80pt;
+        padding-top: 18pt;
+        font-size: 16pt;
+        font-family: Quicksand-Bold;
+    }
+    
+    article #info{
+        background: #1a1a1a;
+    }
+    
+    article #info p{
+        font-size: 12pt;
+        text-align: center;
+        line-height: 20pt;
+        padding: 10pt 0;
+        margin: auto 12pt;
+        color: white;
+    }
+    
+    #info .toPar{
+        text-decoration: none;
+        color: #5a69ff;
+    }
+    
+    #info .toPar:hover{
+        text-shadow: white 0 0 10px;
+    }
+    
+    #ugspe{
+        position: relative;
+        overflow: hidden;
+        background: #292929;
+        margin-top: 0pt;
+    }
+    
+    #ugspe h4{
+        font-family: Quicksand-Bold;
+        text-align: center;
+        font-size: 16pt;
+        color: white;
+        padding-top: 0;
+    }
+    
+    #ugspe p{
+        color: white;
+        margin: auto 16pt;
+        text-align: center;
+        font-size: 13pt;
+        margin-top: -12pt;
+    }
+    
+    #ugspe h5{
+        font-size: 16pt;
+        text-align: center;
+        color: white;
+    }
+    
+    #ugspe ul{
+        list-style-position: inside;
+        justify-content: center;
+        font-size:14pt;
+        padding-top: 6pt;
+        margin-top: -20pt;
+        margin-left: -16pt;
+        margin-bottom: 50pt;
+        height: 120pt
+    }
+    
+    #ugspe li{
+        color: #e5e5e5;
+    }
+    
+    #ugspe #ssugspehome{
+        position: relative;
+        
+    }
+    
+    #ugspe #ssugspehome img{
+        max-width: 80%;
+        max-height: 100%;
+        height: auto;
+        margin: auto auto 14px auto;
+        display: block;
+    }
+    
+    #ugspe .home-download-ugspe{
+        text-align: center;
+    }
+    
+    #ugspe .home-download-ugspe h6{
+        font-family: Quicksand-Bold;
+        text-align: center;
+        font-size: 16pt;
+        color: white;
+        margin: 10pt 0;
+    }
+    
+    /* Defaault ++ */
+    
+        
+    #ugsped{
+        position: relative;
+        overflow: hidden;
+        background: rgb(34,34,34);
+        margin-top: 0;
+    }
+    
+    #ugsped h4{
+        font-family: Quicksand-Bold;
+        text-align: center;
+        font-size: 16pt;
+        color: white;
+        padding-top: 0;
+    }
+    
+    #ugsped p{
+        color: white;
+        margin: auto 16pt;
+        text-align: center;
+        font-size: 13pt;
+        margin-top: -12pt;
+    }
+    
+    #ugsped h5{
+        font-size: 16pt;
+        text-align: center;
+        color: white;
+    }
+    
+    #ugsped ul{
+        list-style-position: inside;
+        justify-content: center;
+        font-size:14pt;
+        padding-top: 6pt;
+        margin-top: -20pt;
+        margin-left: -16pt;
+        margin-bottom: 50pt;
+        height: 100pt
+    }
+    
+    #ugsped li{
+        color: #e5e5e5;
+    }
+    
+    #ugsped #ssugspedhome{
+        position: relative;
+    }
+    
+    #ugsped #ssugspedhome img{
+        max-width: 80%;
+        max-height: 100%;
+        height: auto;
+        margin: auto auto 10px auto;
+        display: block;
+    }
+    
+    #ugsped .home-download-ugspe{
+        text-align: center;
+    }
+    
+    #ugsped .hds{
+        margin-top: -6pt;
+    }
+    
+    #ugsped .home-download-ugspe h6{
+        font-family: Quicksand-Bold;
+        text-align: center;
+        font-size: 16pt;
+        color: white;
+        margin: 10pt 0;
+    }
+    
+    /* License */
+    #license{
+        background: #292929;
+    }
+    
+    #license h4{
+        font-family: Quicksand-Bold;
+        text-align: center;
+        font-size: 18pt;
+        color: white;
+        margin: 0;
+        padding-top: 15pt;
+    }
+    
+    #license h5{
+        margin: 16pt 10pt;
+        font-size: 14pt;
+        color: white;
+    }
+    
+    #license .allow {
+        text-shadow: green 0 0 10px;
+    }
+    
+    #license .nallow {
+        text-shadow: red 0 0 10px;
+    }
+    
+    #license ul{
+        color: #b6b6b6;
+    }
+    
+    /* Footer */
+    footer{
+        background: #141414;
+        text-align: center;
+        color: white;
+        height: 60pt;
+        margin-top: -12pt;
+    }
+    
+    footer p{
+        padding: 22pt 0;
+    }
+    
+    footer a{
+        text-decoration: none;
+        color: gray;
+    }
+    
+    /* Changelog Page */
+    
+    #changelog h2, #changelog h4{
+        text-align: center;
+        color: white;
+        font-family: Quicksand-Bold;
+    }
+    
+    #changelog h2{
+        background: rgb(57,57,57);
+        margin: 0;
+        height: 26pt;
+        padding: 12pt;
+    }
+    
+    #changelog h4{
+        font-size: 16pt;
+    }
+    
+    #changelog li{
+        color: grey;
+    }
+    
+    #changelog #v2{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #changelog #v2 h4{
+        padding-top: 16pt;
+    }
+    
+    #changelog #v1{
+        background: rgb(37,37,37);
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #changelog #v1 h4{
+        padding-top: 16pt;
+    }
+    
+    #changelog #dv1{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #changelog #dv1 h4{
+        padding-top: 16pt;
+    }
+    
+    /* Download Page */
+    #download h2, #download h4, #download h6{
+        text-align: center;
+        color: white;
+        font-family: Quicksand-Bold;
+    }
+    
+    #download h2{
+        background: rgb(57,57,57);
+        margin: 0;
+        height: 26pt;
+        padding: 12pt;
+    }
+    
+    #download h4{
+        font-size: 16pt;
+    }
+    
+    #download h6{
+        font-size: 14pt;
+    }
+    
+    #download #v2{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #download #v2 h4{
+        padding-top: 16pt;
+    }
+    
+    #download .dolink{
+        text-align: center;
+    }
+    
+    #download #v1{
+        background: rgb(37,37,37);
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #download #v1 h4{
+        padding-top: 16pt;
+    }
+    
+    #download #dv1{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #download #dv1 h4{
+        padding-top: 16pt;
+    }
+    
+    /* Screenshot Page */
+    #screenshot h2, #screenshot h4{
+        text-align: center;
+        color: white;
+        font-family: Quicksand-Bold;
+    }
+    
+    #screenshot h2{
+        background: rgb(57,57,57);
+        margin: 0;
+        height: 26pt;
+        padding: 12pt;
+    }
+    
+    #screenshot h4{
+        font-size: 16pt;
+    }
+    
+    #screenshot h6{
+        font-size: 14pt;
+    }
+    
+    #screenshot #v2{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #screenshot #v2 h4{
+        padding-top: 16pt;
+    }
+    
+    #screenshot #v1{
+        background: rgb(37,37,37);
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #screenshot #v1 h4{
+        padding-top: 16pt;
+    }
+    
+    #screenshot #dv1{
+        background: #1f1f1f;
+        color: white;
+        margin-top: -22pt;
+    }
+    
+    #screenshot #dv1 h4{
+        padding-top: 16pt;
+    }
+    
+    #screenshot #v2 img, #screenshot #v1 img, #screenshot #dv1 img{
+        max-width: 80%;
+        max-height: 100%;
+        height: auto;
+        display: block;
+        margin: 10pt auto;
+    }
+    
+</style>
